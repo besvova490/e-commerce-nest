@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  test:
+  pull_request:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -21,7 +21,7 @@ jobs:
         run: npm ci
 
       - name: Run type-check
-        run: npm type-check
+        run: npm run type-check
 
       - name: Run lint
         run: npm lint
